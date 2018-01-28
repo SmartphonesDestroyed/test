@@ -4,7 +4,7 @@ before_script:
 - apt-get update
 - apt-get install firefox xvfb torsocks tor wget
 - tor &
-- while ! wget http://google.com -O/dev/null ; do true ; done
+- while ! torsocks wget http://google.com -O/dev/null ; do true ; done
 
 script:
 - travis_time 20m torsocks xvfb-run firefox
